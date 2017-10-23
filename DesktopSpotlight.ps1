@@ -107,7 +107,7 @@ $TempAssetMeta = Get-FileMetaData $IMGstore\temp\
 foreach ($AssetMeta in $TempAssetMeta){
     #Set Variables for asset name and demension
     $Demension = ($AssetMeta).Dimensions
-    $FileName = ($AssetMeta).Name
+    $FileName = ($AssetMeta).FileName
     #Check if the file is the right demension for your screen (Microsoft downloads both horizontal and vertical copies of each spotlight image)
     If (($AssetMeta).Dimensions -eq "1920 x 1080") {
         Copy-Item $IMGstore\temp\$filename -Destination $IMGstore\$filename -Force
