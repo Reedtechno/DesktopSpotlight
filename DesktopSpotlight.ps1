@@ -93,7 +93,7 @@ IF (Test-Path $IMGstore/temp) {
 }
 
 #Get images that have been added in the last 24 hrs
-$NewAssets = Get-ChildItem $AssetPath | Where-Object {$_.CreationTime -gt (Get-Date).AddDays(-1)  }
+$NewAssets = Get-ChildItem $AssetPath | Where-Object {$_.CreationTime -gt (Get-Date).AddDays(-2)  }
 
 #Copy files to temp and add .jpg extension
 foreach ($NewAsset in $NewAssets){
